@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="RootModule">
+    <File Path="src\app\app.js" Url="src/app/app.js" ReplaceContent="TRUE" />
+    <File Path="src\css\angucomplete-alt.css" Url="src/css/angucomplete-alt.css" ReplaceContent="TRUE" />
+    <File Path="src\css\style.css" Url="src/css/style.css" ReplaceContent="TRUE" />
+    <File Path="src\common\directives\mfb\mfb.min.css" Url="src/common/directives/mfb/mfb.min.css" ReplaceContent="TRUE" />
+    <File Path="src\common\directives\mfb\mfb-directive.js" Url="src/common/directives/mfb/mfb-directive.js" ReplaceContent="TRUE" />
+    <File Path="src\common\directives\modal.js" Url="src/common/directives/modal.js" ReplaceContent="TRUE" />
+    <File Path="src\common\resources\people.js" Url="src/common/resources/people.js" ReplaceContent="TRUE" />
+    <File Path="src\common\resources\trainings.js" Url="src/common/resources/trainings.js" ReplaceContent="TRUE" />
+    <File Path="src\common\resources\trainingattendances.js" Url="src/common/resources/trainingattendances.js" ReplaceContent="TRUE" />
+    <File Path="src\common\resources\traininglogs.js" Url="src/common/resources/traininglogs.js" ReplaceContent="TRUE" />
+    <File Path="src\common\resources\trainingreports.js" Url="src/common/resources/trainingreports.js" ReplaceContent="TRUE" />
+    <File Path="src\common\resources\departments.js" Url="src/common/resources/departments.js" ReplaceContent="TRUE" />
+    <File Path="vendor\angular-ui\bootstrap\ui-bootstrap-dialogs.js" Url="vendor/angular-ui/bootstrap/ui-bootstrap-dialogs.js" ReplaceContent="TRUE" />
+    <File Path="src\app\mfb-buttons.tpl.html" Url="src/app/mfb-buttons.tpl.html" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\trainings\trainings.js" Url="src/app/traininglogs/trainings/trainings.js" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\reports\reports.js" Url="src/app/traininglogs/reports/reports.js" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\logs\traininglogs.js" Url="src/app/traininglogs/logs/traininglogs.js" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\logs\traininglog-list.tpl.html" Url="src/app/traininglogs/logs/traininglog-list.tpl.html" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\logs\traininglog-edit.tpl.html" Url="src/app/traininglogs/logs/traininglog-edit.tpl.html" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\logs\traininglog-add.tpl.html" Url="src/app/traininglogs/logs/traininglog-add.tpl.html" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\trainings\training-list.tpl.html" Url="src/app/traininglogs/trainings/training-list.tpl.html" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\trainings\training-add.tpl.html" Url="src/app/traininglogs/trainings/training-add.tpl.html" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\reports\trainingattendance-matrix.tpl.html" Url="src/app/traininglogs/reports/trainingattendance-matrix.tpl.html" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\reports\trainingattendance-report.tpl.html" Url="src/app/traininglogs/reports/trainingattendance-report.tpl.html" ReplaceContent="TRUE" />
+    <File Path="src\common\services\utililities.js" Url="src/common/services/utililities.js" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\logs\trainingattendee.tpl.html" Url="src/app/traininglogs/logs/trainingattendee.tpl.html" ReplaceContent="TRUE" />
+    <File Path="src\Default.aspx" Url="src/Default.aspx" ReplaceContent="TRUE" />
+    <File Path="src\common\resources\positions.js" Url="src/common/resources/positions.js" ReplaceContent="TRUE" />
+    <File Path="src\common\resources\locations.js" Url="src/common/resources/locations.js" ReplaceContent="TRUE" />
+    <File Path="src\common\directives\am.multiselect\am.multiselect.js" Url="src/common/directives/am.multiselect/am.multiselect.js" ReplaceContent="TRUE" />
+    <File Path="src\common\directives\am.multiselect\multiselect.tmpl.html" Url="src/common/directives/am.multiselect/multiselect.tmpl.html" ReplaceContent="TRUE" />
+    <File Path="src\common\directives\am.multiselect\singleselect.tmpl.html" Url="src/common/directives/am.multiselect/singleselect.tmpl.html" ReplaceContent="TRUE" />
+    <File Path="src\common\directives\am.multiselect\multiselect.css" Url="src/common/directives/am.multiselect/multiselect.css" ReplaceContent="TRUE" />
+    <File Path="src\common\directives\peoplepicker\sp-peoplepicker.min.css" Url="src/common/directives/peoplepicker/sp-peoplepicker.min.css" ReplaceContent="TRUE" />
+    <File Path="src\common\directives\peoplepicker\sp-peoplepicker.js" Url="src/common/directives/peoplepicker/sp-peoplepicker.js" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\people\people-list.tpl.html" Url="src/app/traininglogs/people/people-list.tpl.html" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\people\person-add.tpl.html" Url="src/app/traininglogs/people/person-add.tpl.html" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\people\people.js" Url="src/app/traininglogs/people/people.js" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\departments\department-add.tpl.html" Url="src/app/traininglogs/departments/department-add.tpl.html" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\departments\department-list.tpl.html" Url="src/app/traininglogs/departments/department-list.tpl.html" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\departments\departments.js" Url="src/app/traininglogs/departments/departments.js" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\locations\location-add.tpl.html" Url="src/app/traininglogs/locations/location-add.tpl.html" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\locations\location-list.tpl.html" Url="src/app/traininglogs/locations/location-list.tpl.html" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\locations\locations.js" Url="src/app/traininglogs/locations/locations.js" ReplaceContent="TRUE" />
+    <File Path="src\common\directives\pagination\dirPagination.js" Url="src/common/directives/pagination/dirPagination.js" ReplaceContent="TRUE" />
+    <File Path="src\common\directives\pagination\dirPagination.tpl.html" Url="src/common/directives/pagination/dirPagination.tpl.html" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\positions\position-add.tpl.html" Url="src/app/traininglogs/positions/position-add.tpl.html" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\positions\position-list.tpl.html" Url="src/app/traininglogs/positions/position-list.tpl.html" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\positions\positions.js" Url="src/app/traininglogs/positions/positions.js" ReplaceContent="TRUE" />
+    <File Path="src\common\directives\ngHttpLoader\angular-http-loader.min.js" Url="src/common/directives/ngHttpLoader/angular-http-loader.min.js" ReplaceContent="TRUE" />
+    <File Path="src\common\directives\ngHttpLoader\loader.tpl.html" Url="src/common/directives/ngHttpLoader/loader.tpl.html" ReplaceContent="TRUE" />
+    <File Path="src\common\directives\angular-js-xlsx\xlsx.core.min.js" Url="src/common/directives/angular-js-xlsx/xlsx.core.min.js" ReplaceContent="TRUE" />
+    <File Path="src\common\directives\angular-js-xlsx\angular-js-xlsx.js" Url="src/common/directives/angular-js-xlsx/angular-js-xlsx.js" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\people\people-importer.tpl.html" Url="src/app/traininglogs/people/people-importer.tpl.html" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\peopleImporter\people-importer.tpl.html" Url="src/app/traininglogs/peopleImporter/people-importer.tpl.html" ReplaceContent="TRUE" />
+    <File Path="src\app\traininglogs\peopleImporter\people.js" Url="src/app/traininglogs/peopleImporter/people.js" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

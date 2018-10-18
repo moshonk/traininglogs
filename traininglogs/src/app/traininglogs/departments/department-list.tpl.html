@@ -1,0 +1,57 @@
+<div class="row">
+    <div class="col-md-12">
+        <h2><i class="fa fa-list-alt"></i> Departments</h2>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label class="control-label"><i class="fa fa-search"></i> Search</label>
+            <input type="text" name="search" ng-model="q" value="" placeholder="Enter search text" />
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <span class="pull-right">
+            <a href="#listDepartments" ng-click="addDepartment()" class="btn btn-sm btn-success">
+                <i class="fa fa-plus-circle"></i>
+                Add
+            </a>
+        </span>
+        <span class="btn-group pull-left">
+            <a href="{{link.url}}" class="btn btn-sm btn-info" ng-repeat="link in links">
+                <i class="fa {{link.icon}}"></i>
+                {{link.title}}
+            </a>
+        </span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered table-condensed table-striped table-hover">
+            <tbody>
+                <tr>
+                    <th>Title</th>
+                    <th></th>
+                </tr>
+                <tr dir-paginate="department in filterdItems = (departments | filter: q) | itemsPerPage: 10">
+                    <td>{{department.title}}</td>
+                    <td>
+                        <div class="btn-group" uib-dropdown>
+                            <button id="split-button" type="button" class="btn btn-sm btn-info"><i class="fa fa-gear"> </i> Action</button>
+                            <button type="button" class="btn btn-sm btn-info" uib-dropdown-toggle>
+                                <span class="caret"></span>
+                                <span class="sr-only">Split button!</span>
+                            </button>
+                            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                                <li role="menuitem"><a href="#listDepartments" ng-click="deleteDepartment(department)"><i class="fa fa-trash"> </i> Delete</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-sm-12">
+        <dir-pagination-controls boundary-links="true" template-url="common/directives/pagination/dirPagination.tpl.html"></dir-pagination-controls>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+﻿<div class="bootstrap-iso">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="formden_header">
+                <h2><i class="fa fa-file-excel-o"></i> Import Staff Members</h2> 
+            </div>
+        </div>
+    </div>
+    <button type="button" ng-click="test()">Test</button>
+    <div class="well">
+        <div class="#">
+            <span>Please ensure that the columns in your excel sheet follow one another in this order: </span>
+            <div class="#">PAYROLL NO | NAME	| GENDER | EMPLOYMENT POSITION | DEPARTMENT | LOCATION</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label class="control-label">Select Import file(Only .xlsx files allowed)</label>
+                <js-xls onread="readImportFile" onerror="errorFileImportError"></js-xls>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4" ng-show="data">
+            <div class="form-group">
+                <label class="control-label"><i class="fa fa-search"></i> Search</label>
+                <input type="text" name="search" ng-model="q" value="" placeholder="Enter search text" />
+            </div>
+        </div>
+        <div class="col-md-4">{{win}}yyy
+            <span ng-show="processing || loadingImportFile"><i class="fa fa-spinner fa-spin"> </i> processing...</span>
+        </div>
+        <div class="col-md-4" ng-show="data">
+            <button class="btn btn-success pull-right" name="submit" type="button" ng-click="this.import()" ng-disabled="processing">
+                Start Import
+            </button>
+        </div>
+    </div>
+    <div class="row" ng-show="data">
+        <div class="col-md-12">
+            <table class="table table-bordered table-condensed table-striped table-hover">
+                <tbody>
+                    <tr>
+                        <th>Payroll</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Position</th>
+                        <th>Department</th>
+                        <th>Location</th>
+                    </tr>
+                    <tr ng-paginate="person in data | itemsPerPage: 10 | filter: q">
+                        <td>{{person.payrollNo}}</td>
+                        <td>{{person.name}}</td>
+                        <td>{{person.gender}}</td>
+                        <td>{{person.position}}</td>
+                        <td>{{person.department}}</td>
+                        <td>{{person.location}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-12">
+<!--            <dir-pagination-controls boundary-links="true" template-url="common/directives/pagination/dirPagination.tpl.html"></dir-pagination-controls>-->
+        </div>
+        <div class="modal-footer">
+            <div class="form-group pull-right">
+                <!--<button class="btn btn-success " name="submit" type="submit" ng-click="personCtrl.updatePerson(person); submit(frm, person)" ng-disabled="!frm.$valid">
+                    Update & Close
+                </button>-->
+                <button class="btn btn-success" name="submit" type="button" ng-click="this.import()" ng-show="data" ng-disabled="processing">
+                    Start Import
+                </button>
+                <button class="btn btn-warning " name="submit" type="submit" ng-click="cancel()">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

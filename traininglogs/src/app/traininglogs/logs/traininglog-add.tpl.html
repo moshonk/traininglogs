@@ -1,0 +1,108 @@
+<!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+<!--Font Awesome (added because you use icons in your prepend/append)-->
+<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+<!-- Inline CSS based on choices in "Settings" tab -->
+<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+<div class="bootstrap-iso" ng-controller="traininglogsCtrl as traininglogCtrl">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>
+                    <span ng-show="!traininglog.id">Add</span>
+                    <span ng-show="traininglog.id">Edit</span>
+                    a Training log
+                </h2>
+            </div>
+            <form method="post" name="frm" novalidate>
+                <div class="modal-body">
+                    <div class="form-group ">
+                        <label class="control-label requiredField" for="trainingTitle">
+                            Training Title
+                            <span class="asteriskField">
+                                *
+                            </span>
+                        </label>
+                        <!--  "angucomplete-alt" directive's documentation: https://ghiden.github.io/angucomplete-alt -->
+                        <div angucomplete-alt id="training"
+                             initial-value="traininglog.training"
+                             placeholder="Title for the training"
+                             pause="300"
+                             selected-object="trainingSelected"
+                             local-data="trainings"
+                             search-fields="title"
+                             title-field="title"
+                             description-field="target"
+                             minlength="1"
+                             maxlength="128"
+                             field-required="true"
+                             input-name="trainingTitle"
+                             input-class="form-control form-control-small"
+                             match-class="highlight">
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label class="control-label requiredField" for="date">
+                            Training Date
+                            <span class="asteriskField">
+                                *
+                            </span>
+                        </label>
+                        <div class="input-group">
+                            <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="date" ng-model="traininglog.startDate" required />
+                            <div class="input-group-addon">
+                                <i class="fa fa-calendar">
+                                </i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label class="control-label requiredField" for="trainingFacilitator">
+                            Facilitator(s)
+                            <span class="asteriskField">
+                                *
+                            </span>
+                        </label>
+                        <sp-people-picker name="trainingFacilitator" id="trainingFacilitator" ng-model="traininglog.facilitator" min-entries="1" max-entries="4" max-entries-to-show="4" allow-duplicates="false" show-login="true" show-title="true" min-characters="3" app-web-url="appWebUrl" />
+                    </div>
+                    <div class="form-group" id="div_target">
+                        <label class="control-label requiredField" for="target">
+                            Target
+                            <span class="asteriskField">
+                                *
+                            </span>
+                        </label>
+                        <div class="">
+                            <label class="radio-inline">
+                                <input name="target" type="radio" value="all" ng-model="traininglog.target" aria-label="Toggle ngShow" />
+                                All Depts
+                            </label>
+                            <label class="radio-inline">
+                                <input name="target" type="radio" value="selected" ng-model="traininglog.target" aria-label="Toggle ngShow" />
+                                Specific Dept(s)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group animate-show-hide" ng-show="traininglog.target=='selected'">
+                        <am-multiselect class="input-lg" multiple="true" ms-selected="{{selectedDepartments()}}"
+                                        ng-model="traininglog.targetDepartment" ms-header="Select target department(s) for this training"
+                                        options="d as d.title for d in departments"
+                                        template-url="common/directives/am.multiselect/multiselect.tmpl.html"
+                                        change="selected()">
+                        </am-multiselect>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="form-group pull-right">
+                        <button class="btn btn-success " name="submit" type="submit" ng-click="traininglogCtrl.updateTraininglog(traininglog); submit(frm, traininglog)" ng-disabled="!frm.$valid">
+                            Update & Close
+                        </button>
+                        <button class="btn btn-warning " name="submit" type="submit" ng-click="cancel()">
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

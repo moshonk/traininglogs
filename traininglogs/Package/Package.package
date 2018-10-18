@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="7d7033a6-4e0d-4fa1-ab03-63c8cfe06126" 
+        solutionId="7d7033a6-4e0d-4fa1-ab03-63c8cfe06126" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="traininglogs"
+        sharePointProductVersion="15.0">
+  <features>
+        <featureReference itemId="04955ca3-3988-437f-858d-e3caffcfdcab" />
+  </features>
+</package>

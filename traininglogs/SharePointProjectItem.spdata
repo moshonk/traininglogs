@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Type="ElementManifest" />
+    <ProjectItemFile Source="src\app\app.js" Target="src\app\" Type="ElementFile" />
+    <ProjectItemFile Source="src\css\angucomplete-alt.css" Target="src\css\" Type="ElementFile" />
+    <ProjectItemFile Source="src\css\style.css" Target="src\css\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\directives\mfb\mfb.min.css" Target="src\common\directives\mfb\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\directives\mfb\mfb-directive.js" Target="src\common\directives\mfb\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\directives\modal.js" Target="src\common\directives\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\resources\people.js" Target="src\common\resources\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\resources\trainings.js" Target="src\common\resources\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\resources\trainingattendances.js" Target="src\common\resources\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\resources\traininglogs.js" Target="src\common\resources\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\resources\trainingreports.js" Target="src\common\resources\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\resources\departments.js" Target="src\common\resources\" Type="ElementFile" />
+    <ProjectItemFile Source="vendor\angular-ui\bootstrap\ui-bootstrap-dialogs.js" Target="vendor\angular-ui\bootstrap\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\mfb-buttons.tpl.html" Target="src\app\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\trainings\trainings.js" Target="src\app\traininglogs\trainings\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\reports\reports.js" Target="src\app\traininglogs\reports\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\logs\traininglogs.js" Target="src\app\traininglogs\logs\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\logs\traininglog-list.tpl.html" Target="src\app\traininglogs\logs\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\logs\traininglog-edit.tpl.html" Target="src\app\traininglogs\logs\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\logs\traininglog-add.tpl.html" Target="src\app\traininglogs\logs\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\trainings\training-list.tpl.html" Target="src\app\traininglogs\trainings\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\trainings\training-add.tpl.html" Target="src\app\traininglogs\trainings\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\reports\trainingattendance-matrix.tpl.html" Target="src\app\traininglogs\reports\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\reports\trainingattendance-report.tpl.html" Target="src\app\traininglogs\reports\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\services\utililities.js" Target="src\common\services\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\logs\trainingattendee.tpl.html" Target="src\app\traininglogs\logs\" Type="ElementFile" />
+    <ProjectItemFile Source="src\Default.aspx" Target="src\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\resources\positions.js" Target="src\common\resources\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\resources\locations.js" Target="src\common\resources\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\directives\am.multiselect\am.multiselect.js" Target="src\common\directives\am.multiselect\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\directives\am.multiselect\multiselect.tmpl.html" Target="src\common\directives\am.multiselect\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\directives\am.multiselect\singleselect.tmpl.html" Target="src\common\directives\am.multiselect\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\directives\am.multiselect\multiselect.css" Target="src\common\directives\am.multiselect\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\directives\peoplepicker\sp-peoplepicker.min.css" Target="src\common\directives\peoplepicker\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\directives\peoplepicker\sp-peoplepicker.js" Target="src\common\directives\peoplepicker\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\people\people-list.tpl.html" Target="src\app\traininglogs\people\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\people\person-add.tpl.html" Target="src\app\traininglogs\people\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\people\people.js" Target="src\app\traininglogs\people\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\departments\department-add.tpl.html" Target="src\app\traininglogs\departments\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\departments\department-list.tpl.html" Target="src\app\traininglogs\departments\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\departments\departments.js" Target="src\app\traininglogs\departments\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\locations\location-add.tpl.html" Target="src\app\traininglogs\locations\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\locations\location-list.tpl.html" Target="src\app\traininglogs\locations\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\locations\locations.js" Target="src\app\traininglogs\locations\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\directives\pagination\dirPagination.js" Target="src\common\directives\pagination\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\directives\pagination\dirPagination.tpl.html" Target="src\common\directives\pagination\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\positions\position-add.tpl.html" Target="src\app\traininglogs\positions\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\positions\position-list.tpl.html" Target="src\app\traininglogs\positions\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\positions\positions.js" Target="src\app\traininglogs\positions\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\directives\ngHttpLoader\angular-http-loader.min.js" Target="src\common\directives\ngHttpLoader\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\directives\ngHttpLoader\loader.tpl.html" Target="src\common\directives\ngHttpLoader\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\directives\angular-js-xlsx\xlsx.core.min.js" Target="src\common\directives\angular-js-xlsx\" Type="ElementFile" />
+    <ProjectItemFile Source="src\common\directives\angular-js-xlsx\angular-js-xlsx.js" Target="src\common\directives\angular-js-xlsx\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\people\people-importer.tpl.html" Target="src\app\traininglogs\people\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\peopleImporter\people-importer.tpl.html" Target="src\app\traininglogs\peopleImporter\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\traininglogs\peopleImporter\people.js" Target="src\app\traininglogs\peopleImporter\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

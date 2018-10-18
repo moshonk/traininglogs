@@ -1,0 +1,151 @@
+<!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+<div class="bootstrap-iso">
+    <div class="container-fluid" ng-controller="peopleCtrl as personCtrl">
+        <div class="row">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="formden_header">
+                        <h2>
+                            Add Staff Member
+                        </h2>
+                    </div>
+                </div>
+                <form class="form-horizontal" method="post" name="frm">
+                    <div class="modal-body">
+                        <div class="form-group ">
+                            <label class="control-label col-sm-2 requiredField" for="payrollNo">
+                                Payroll No
+                                <span class="asteriskField">
+                                    *
+                                </span>
+                            </label>
+                            <div class="col-sm-10">
+                                <input class="form-control" id="payrollNo" name="payrollNo" type="text" data-ng-model="person.payrollNo"/>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label class="control-label col-sm-2 requiredField" for="name">
+                                Name
+                                <span class="asteriskField">
+                                    *
+                                </span>
+                            </label>
+                            <div class="col-sm-10">
+                                <input class="form-control" id="name" name="name" type="text" data-ng-model="person.name"/>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label class="control-label col-sm-2 requiredField" for="select">
+                                Gender
+                                <span class="asteriskField">
+                                    *
+                                </span>
+                            </label>
+                            <div class="col-sm-10">
+                                <select class="select form-control" id="select" name="select" data-ng-model="person.gender">
+                                    <option value="Male">
+                                        Male
+                                    </option>
+                                    <option value="Female">
+                                        Female
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label class="control-label col-sm-2 requiredField" for="Position">
+                                Position
+                                <span class="asteriskField">
+                                    *
+                                </span>
+                            </label>
+                            <div class="col-sm-10">
+                                <div angucomplete-alt id="position"
+                                     initial-value="person.position"
+                                     placeholder="Employment Position"
+                                     pause="300"
+                                     selected-object="positionSelected"
+                                     local-data="positions"
+                                     search-fields="title"
+                                     title-field="title"
+                                     description-field=""
+                                     minlength="1"
+                                     maxlength="128"
+                                     field-required="true"
+                                     input-name="position"
+                                     input-class="form-control form-control-small"
+                                     match-class="highlight">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label class="control-label col-sm-2" for="text3">
+                                Department
+                                <span class="asteriskField">
+                                    *
+                                </span>
+                            </label>
+                            <div class="col-sm-10">
+                                <div angucomplete-alt id="department"
+                                     initial-value="person.department"
+                                     placeholder="Department"
+                                     pause="300"
+                                     selected-object="departmentSelected"
+                                     local-data="departments"
+                                     search-fields="title"
+                                     title-field="title"
+                                     description-field=""
+                                     minlength="1"
+                                     maxlength="128"
+                                     field-required="true"
+                                     input-name="department"
+                                     input-class="form-control form-control-small"
+                                     match-class="highlight">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label class="control-label col-sm-2" for="location">
+                                Location
+                                <span class="asteriskField">
+                                    *
+                                </span>
+                            </label>
+                            <div class="col-sm-10">
+                                <div angucomplete-alt id="location"
+                                     initial-value="person.location"
+                                     placeholder="Office location"
+                                     pause="300"
+                                     selected-object="locationSelected"
+                                     local-data="locations"
+                                     search-fields="title"
+                                     title-field="title"
+                                     description-field=""
+                                     minlength="1"
+                                     maxlength="128"
+                                     field-required="true"
+                                     input-name="location"
+                                     input-class="form-control form-control-small"
+                                     match-class="highlight">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="form-group pull-right">
+                            <button class="btn btn-success " name="submit" type="submit" ng-click="personCtrl.updatePerson(person); submit(frm, person)" ng-disabled="!frm.$valid">
+                                Update & Close
+                            </button>
+                            <button class="btn btn-warning " name="submit" type="submit" ng-click="cancel()">
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

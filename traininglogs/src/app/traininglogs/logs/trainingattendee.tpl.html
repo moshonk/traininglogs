@@ -1,0 +1,130 @@
+<!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+<!-- Inline CSS based on choices in "Settings" tab -->
+
+<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+<div class="bootstrap-iso">
+    <div class="container-fluid" ng-controller="traininglogsCtrl as traininglogCtrl">
+        <div class="row">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>
+                        Add a Training Attendee
+                    </h2>
+                </div>
+                <form method="post" name="frm">
+                    <div class="modal-body col-md-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Title: </h4>{{traininglog.training.title}}
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Training Date: </h4>{{traininglog.startDate | date: 'dd/MM/yyyy' }}
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="form-group col-md-6">
+                            <label class="control-label requiredField" for="payrollNo">
+                                Payroll No
+                                <span class="asteriskField">
+                                    *
+                                </span>
+                            </label>
+                            <div angucomplete-alt id="payrollNo"
+                                 initial-value="traininglog.attendance.attendee"
+                                 placeholder="Staff payroll No"
+                                 pause="300"
+                                 selected-object="personSelected"
+                                 local-data="people"
+                                 local-search="peopleSearch"
+                                 title-field="title"
+                                 description-field="description"
+                                 minlength="1"
+                                 maxlength="128"
+                                 field-required="true"
+                                 input-name="payrollNo"
+                                 input-class="form-control form-control-small"
+                                 match-class="highlight">
+                            </div>
+                            <div class="well alert alert-warning" ng-if="personFound == 0">
+                                <i class="fa fa-exclamation-triangle"> </i> Sorry! Your details cannot be found in the system. Please contact the system administrator
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label class="control-label requiredField" for="name">
+                                Name
+                                <span class="asteriskField">
+                                    *
+                                </span>
+                            </label>
+                            <input class="form-control" id="name" name="name" placeholder="Employee Name" type="text" ng-model="traininglog.attendance.attendee.name" ng-disabled="personFound == 1" />
+                        </div>
+                        <div class="form-group col-md-6" id="div_gender">
+                            <label class="control-label requiredField" for="gender">
+                                Gender
+                                <span class="asteriskField">
+                                    *
+                                </span>
+                            </label>
+                            <div class="">
+                                <label class="radio-inline">
+                                    <input name="gender" type="radio" value="Female" ng-model="traininglog.attendance.attendee.gender" ng-disabled="personFound == 1" />
+                                    Female
+                                </label>
+                                <label class="radio-inline">
+                                    <input name="gender" type="radio" value="Male" ng-model="traininglog.attendance.attendee.gender" ng-disabled="personFound == 1" />
+                                    Male
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="control-label requiredField" for="position">
+                                Position
+                                <span class="asteriskField">
+                                    *
+                                </span>
+                            </label>
+                            <input class="form-control" id="position" name="position" placeholder="Position" type="text" ng-model="traininglog.attendance.attendee.position.title" ng-disabled="personFound == 1" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="control-label requiredField" for="department">
+                                Department
+                                <span class="asteriskField">
+                                    *
+                                </span>
+                            </label>
+                            <input class="select form-control" id="department" name="department" placeholder="Department" type="text"  ng-model="traininglog.attendance.attendee.department.title" ng-disabled="personFound == 1" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="control-label requiredField" for="location">
+                                Location
+                                <span class="asteriskField">
+                                    *
+                                </span>
+                            </label>
+                            <input class="select form-control" id="location" name="location" placeholder="Location" type="text"  ng-model="traininglog.attendance.attendee.location.title" ng-disabled="personFound == 1" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="control-label " for="remarks">
+                                Remarks
+                            </label>
+                            <textarea class="form-control" cols="40" id="remarks" name="remarks" rows="2" ng-model="traininglog.attendance.remarks" placeholder="Please write your comments about the training"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="form-group  col-md-12">
+                            <div>
+                                <button class="btn btn-success " name="submit" type="submit" ng-click="traininglogCtrl.updateAttendance(traininglog); submit(frm, traininglog)" ng-disabled="!frm.$valid">
+                                    Update & Close
+                                </button>
+                                <button class="btn btn-warning " name="cancel" type="button" ng-click="cancel()">
+                                    Cancel
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
